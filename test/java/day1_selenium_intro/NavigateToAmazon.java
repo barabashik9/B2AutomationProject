@@ -14,5 +14,6 @@ public class NavigateToAmazon {
         driver.navigate().forward();
         driver.navigate().refresh();
 
+
     }
 }
