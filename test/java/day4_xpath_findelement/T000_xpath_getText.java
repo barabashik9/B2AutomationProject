@@ -88,7 +88,7 @@ public class T000_xpath_getText {
         Thread.sleep(3000);
 
         WebElement successMessage = driver.findElement(By.xpath("//span[@class='body-1']"));
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         // 10. validate - We've sent you an email with a link to reset your password. Please check your email
         try{
             System.out.println(successMessage.getText());
