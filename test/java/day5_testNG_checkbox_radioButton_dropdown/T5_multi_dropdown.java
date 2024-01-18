@@ -36,13 +36,13 @@ public class T5_multi_dropdown {
         Select dropdown = new Select(driver.findElement(By.xpath("//select[@id='cars']")));
         Assert.assertTrue(dropdown.isMultiple());
         // select by index
-      //  dropdown.selectByIndex(0);
-      //  Thread.sleep(3000);
-      //  dropdown.selectByValue("saab");
-      //  Thread.sleep(3000);
-      //  dropdown.selectByVisibleText("Opel");
-      //  Thread.sleep(3000);
-      //  dropdown.selectByIndex(3);
+        //  dropdown.selectByIndex(0);
+        //  Thread.sleep(3000);
+        //  dropdown.selectByValue("saab");
+        //  Thread.sleep(3000);
+        //  dropdown.selectByVisibleText("Opel");
+        //  Thread.sleep(3000);
+        //  dropdown.selectByIndex(3);
 
 
 
@@ -59,8 +59,6 @@ public class T5_multi_dropdown {
             option.click();
             System.out.println(option.getText());
         }
-
-
 
         dropdown.deselectAll();
 

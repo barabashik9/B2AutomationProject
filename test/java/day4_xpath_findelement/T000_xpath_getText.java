@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utilities.DocuportConstance;
+import utilities.DocuportConstants;
 import utilities.WebDriverFactory;
 
 public class T000_xpath_getText {
@@ -41,10 +41,10 @@ public class T000_xpath_getText {
         String actualUrlForResetPassword = driver.getCurrentUrl();
 
 
-        if(actualUrlForResetPassword.contains(DocuportConstance.RESET_PASSWORD_URL)){
-            System.out.println("TEST PASS: => Actual url: " + actualUrlForResetPassword + " contains expected url: " + DocuportConstance.RESET_PASSWORD_URL);
+        if(actualUrlForResetPassword.contains(DocuportConstants.RESET_PASSWORD_URL)){
+            System.out.println("TEST PASS: => Actual url: " + actualUrlForResetPassword + " contains expected url: " + DocuportConstants.RESET_PASSWORD_URL);
         } else {
-            System.out.println("TEST FAIL: => Actual url: " + actualUrlForResetPassword + " does not contain expected url: " + DocuportConstance.RESET_PASSWORD_URL);
+            System.out.println("TEST FAIL: => Actual url: " + actualUrlForResetPassword + " does not contain expected url: " + DocuportConstants.RESET_PASSWORD_URL);
         }
 
 
@@ -52,16 +52,16 @@ public class T000_xpath_getText {
         WebElement validateMessage = driver.findElement(By.xpath("//div[@class='v-messages__message']"));
         String actualValidateMessage = validateMessage.getText();
 
-        if(actualValidateMessage.contains(DocuportConstance.RESET_PASSWORD_MESSAGE)){
-            System.out.println("TEST PASS: => Actual validate message: \"" + actualValidateMessage+"\" contains expected message \"" + DocuportConstance.RESET_PASSWORD_MESSAGE);
+        if(actualValidateMessage.contains(DocuportConstants.RESET_PASSWORD_MESSAGE)){
+            System.out.println("TEST PASS: => Actual validate message: \"" + actualValidateMessage+"\" contains expected message \"" + DocuportConstants.RESET_PASSWORD_MESSAGE);
         }else {
-            System.out.println("TEST FAIL: => Actual validate message: \"" + actualValidateMessage+"\" doesnt contains expected message \"" + DocuportConstance.RESET_PASSWORD_MESSAGE);
+            System.out.println("TEST FAIL: => Actual validate message: \"" + actualValidateMessage+"\" doesnt contains expected message \"" + DocuportConstants.RESET_PASSWORD_MESSAGE);
         }
 
 
         // 6. enter forgotpasswordg1@gmail.com to email box
         WebElement emailInputBox = driver.findElement(By.xpath("//input[contains(@id,'input')]"));
-        emailInputBox.sendKeys(DocuportConstance.EMAIL_FOR_RESET_PASSWORD);
+        emailInputBox.sendKeys(DocuportConstants.EMAIL_FOR_RESET_PASSWORD);
 
 
         // 7. validate cancel button is displayed
